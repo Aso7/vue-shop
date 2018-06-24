@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+
+</body>
+<script>
+    //从指定数组中删除指定索引
+    let arr = ['a', 'b', 'c', 'd', 'e', 'f', 'g', 'h']
+    let delindex = [1, 2, 4, 6]
+
+    function getArrind(arr, delindex) {
+        for (var i = 0; i < arr.length; i++) {
+            for (var j = 0; j < delindex.length; j++) {
+                if (i == delindex[j]) {
+                    delete arr[i]
+                }
+            }
+        }
+        return arr
+    }
+    var newArr = getArrind(arr, delindex)
+    console.log(newArr)
+
+</script>
+
+</html>
